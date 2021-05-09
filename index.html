@@ -1,0 +1,44 @@
+<head>
+        <title>Onyn Fans :D</title>
+        <link rel="manifest" href="/manifest.webmanifest">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/icon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/icon-16x16.png">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <link href="video-js.css" rel="stylesheet" />
+        <style>
+        body {
+                margin: 0 auto;
+                overflow: hidden;
+        }
+        </style>
+</head>
+
+<body>
+        <video-js
+                id="video"
+                data-setup='{
+                        "html5": {
+                                "vhs": {
+                                        "overrideNative": "true"
+                                }
+                        },
+                        "fill": "true"
+                }'
+                autoplay
+                muted
+                fill
+                >
+                <source src="/hls/onyn.m3u8" />
+        </video-js>
+
+        <script src="video.min.js"></script>
+        <script>
+                if ('serviceWorker' in navigator) {
+                        navigator.serviceWorker.register('/service-worker.js');
+                }
+        </script>
+}
+</body>
