@@ -7,6 +7,9 @@
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
         <link href="video-js.css" rel="stylesheet" />
         <style>
         body {
@@ -20,18 +23,17 @@
         <video-js
                 id="video"
                 data-setup='{
+                        "fill": "true",
                         "html5": {
                                 "vhs": {
                                         "overrideNative": "true"
                                 }
-                        },
-                        "fill": "true"
+                        }
                 }'
                 autoplay
                 muted
-                fill
                 >
-                <source src="/hls/onyn.m3u8" />
+                <source src="/hls/onyn.m3u8" type="application/x-mpegURL" />
         </video-js>
 
         <script src="video.min.js"></script>
@@ -40,5 +42,4 @@
                         navigator.serviceWorker.register('/service-worker.js');
                 }
         </script>
-}
 </body>
