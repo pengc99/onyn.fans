@@ -5,6 +5,6 @@ Responsive HLS live streaming page for a webcam. Works on mobile and desktop. In
 Live demo at https://onyn.fans
 
 Credits:
-https://github.com/videojs/video.js
 
-https://github.com/prateekrastogi/videojs-landscape-fullscreen
+* https://github.com/videojs/video.js
+* https://github.com/prateekrastogi/videojs-landscape-fullscreen
