@@ -40,7 +40,12 @@
         </video-js>
 
         <script src="video.min.js"></script>
+        <script src="video-js-landscape-fullscreen.min.js"></script>
         <script>
+                var player = videojs('video');
+
+                player.landscapeFullscreen();
+
                 if ('serviceWorker' in navigator) {
                         navigator.serviceWorker.register('/service-worker.js');
                 }
