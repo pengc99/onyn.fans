@@ -6,4 +6,5 @@ Live demo at https://onyn.fans
 
 Credits:
 https://github.com/videojs/video.js
+
 https://github.com/prateekrastogi/videojs-landscape-fullscreen
