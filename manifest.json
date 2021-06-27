@@ -4,8 +4,8 @@
     "display": "standalone",
     "scope": "https://onyn.fans",
     "start_url": "https://onyn.fans",
-    "name": "Onyn Fans :D",
-    "short_name": "Onyn Fans :D",
+    "name": "Onyn Fans",
+    "short_name": "Onyn Fans",
     "description": "Onyn Fans Live Stream",
     "icons": [
         {
