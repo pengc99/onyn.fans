@@ -1,4 +1,5 @@
 # This configuration file is designed to be used with the alfg/nginx-rtmp Docker container
+# /tmp/hls inside of the container is a bind mount to the web directory's /hls directory
 
 daemon off;
 
