@@ -1,0 +1,28 @@
+daemon off;
+
+error_log /dev/stdout info;
+
+events {
+    worker_connections 1024;
+}
+
+rtmp {
+        server {
+                listen 1935;
+                application live {
+                        live on;
+                        record off;
+                        hls on;
+                        hls_path /tmp/hls/;
+                        deny play all;
+                        recorder preview {
+                                record keyframes;
+                                record_max_frames 5;
+                                record_path /tmp/hls;
+                                record_interval 1m;
+                                exec_record_done ffmpeg -ss 00:00:01 -i $path -vframes 1 -q:v 5 -y /tmp/hls/$name.jpg;
+
+                        }
+                }
+        }
+}
