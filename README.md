@@ -8,6 +8,7 @@ This script uses several external scripts and resources:
 * https://github.com/videojs/video.js
 * https://github.com/prateekrastogi/videojs-landscape-fullscreen
 * https://hub.docker.com/r/alfg/nginx-rtmp
+* http://ffmpeg.org/
 
 ***
 
