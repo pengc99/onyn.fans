@@ -2,6 +2,8 @@
 
 Responsive HLS live streaming page for a webcam. Works on mobile and desktop. Includes manifest as a progressive web app.
 
+The /etc directory contains Docker container configuration files and starter scripts for sending the RTMP push stream to the server, including one script for USB based cameras and one for RTMP based IP cameras. 
+
 Live demo at https://onyn.fans
 
 This script uses several external scripts and resources:
