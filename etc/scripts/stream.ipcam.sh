@@ -1,0 +1,23 @@
+ffmpeg \
+  -vsync 1 \
+  -use_wallclock_as_timestamps 1 \
+  -fflags +igndts \
+  -rtsp_transport tcp \
+  -i "rtsp://onyn:wQp4CV8cyZy2kACA@192.168.1.200/cam/realmonitor?channel=1&subtype=0" \
+  -metadata title="" \
+  -codec:a aac \
+  -ar 16000 \
+  -b:a 64k \
+  -codec:v libx264 \
+  -b:v 960k \
+  -profile:v baseline \
+  -pix_fmt yuv420p \
+  -preset veryfast \
+  -filter:v fps=15 \
+  -filter:v scale=1280:720 \
+  -filter:V drawtext="fontsize=20: box=1: boxcolor=black@0.75: boxborderw=5: fontcolor=white: x=5: y=(h-text_h-5): text='%{localtime\:%m/%d/%Y - %T}'" \
+  -g 75 \
+  -r 15 \
+  -maxrate 1024k \
+  -bufsize 5120k \
+  -f flv rtmp://alpha.tacocat.org/live/b339c9e7-e4d5-4ab4-96ec-fc4a9a6fa155
