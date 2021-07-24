@@ -1,5 +1,10 @@
 #!/bin/bash
-#The following configuration includes ffmpeg lenscorrection filter settings for the Amcrest IP5M-T1179EW-28MM IP POE camera
+#The following configuration includes a interesting ffmpeg commands
+# The Amcrest IP5M-T1179EW-28MM outputs really poorly formed h.264 video and AAC audio, so we instruct ffmpeg to ignore errors and substitute in duplicated data frames
+# We can then rebuild the audio stream with a new dts; I don't think there's much we can do with the video data
+# For some reason ffmpeg also has problems ingesting UDP RTMP video, so we force ffmpeg to ingest as TCP
+# The Amcrest IP5M-T1179EW-28MM also doesn't do true 16:9 video - if you select a 16:9 resolution the camera just stretches the 4:3 sensor output - we crop the top and bottonm to 16:9
+# Finally, the Amcrest IP5M-T1179EW-28MM has some pretty bad lens distortion, so we use the lenscorrection filter to correct it
 
 while :
 do
