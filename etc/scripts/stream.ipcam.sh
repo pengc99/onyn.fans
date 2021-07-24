@@ -1,5 +1,5 @@
 #!/bin/bash
-#The following configuration includes a interesting ffmpeg commands
+#The following configuration includes a few interesting ffmpeg commands
 # The Amcrest IP5M-T1179EW-28MM outputs really poorly formed h.264 video and AAC audio, so we instruct ffmpeg to ignore errors and substitute in duplicated data frames
 # We can then rebuild the audio stream with a new dts; I don't think there's much we can do with the video data
 # For some reason ffmpeg also has problems ingesting UDP RTMP video, so we force ffmpeg to ingest as TCP
