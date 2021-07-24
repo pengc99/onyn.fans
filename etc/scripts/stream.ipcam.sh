@@ -1,5 +1,5 @@
 #!/bin/bash
-#The following configuration file includes lens distortion correction for the Amcrest IP5M-T1179EW-28MM camera
+#The following configuration includes ffmpeg lenscorrection filter settings for the Amcrest IP5M-T1179EW-28MM IP POE camera
 
 while :
 do
