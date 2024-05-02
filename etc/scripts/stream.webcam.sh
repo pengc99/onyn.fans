@@ -14,7 +14,7 @@ do
     -profile:v baseline \
     -pix_fmt yuv420p \
     -preset veryfast \
-    -filter:v drawtext="fontsize=20: box=1: boxcolor=black@0.75: boxborderw=5: fontcolor=white: x=5: y=(h-text_h-5): text='%{localtime\:%m/%d/%Y - %T}'" \
+    -filter:v drawtext="fontsize=20: box=1: boxcolor=black@0.75: boxborderw=5: fontcolor=white: x=5: y=(h-text_h-5): text='%{localtime\:%Y%m%d - %T}'" \
     -f flv <RTMP endpoint>
   sleep 5
 done
