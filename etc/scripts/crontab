@@ -1,0 +1,8 @@
+# This crontab should be run as a user that has access to the www root for the domain
+# ffmpeg is configured to crop the screenshot to a slightly smaller thumbnail in a different aspect ratio
+# Remember to change variables such as:
+#      <domain_name>
+#      <stream_key>
+#      <path_to_www_root>
+
+*/5     *       *       *       *       ffmpeg -y -hide_banner -loglevel error -i https://<domain name>/hls/<stream_key>.m3u8 -frames:v 1 -vf "crop=iw-80:ih-90" -q:v 8 <path_to_www_root>/thumbnail-og-image.jpg >> /dev/null 2>$1
