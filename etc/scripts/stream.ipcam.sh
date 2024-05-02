@@ -21,7 +21,7 @@ do
       lenscorrection=cx=0.5:cy=0.5:k1=-0.33:k2=0.105:, \
       crop=iw:iw*9/16, \
       scale=1280:720, \
-      drawtext=fontsize=20: box=1: boxcolor=black@0.75: boxborderw=5: fontcolor=white: x=5: y=(h-text_h-5): text='%{localtime\:%Y%m%d - %T}', \
+      drawtext=fontsize=20: box=1: boxcolor=black@0.75: boxborderw=5: fontcolor=white: x=5: y=(h-text_h-5): text='%{localtime\:%Y-%m-%dT%T%z}', \
     freezedetect" \
     -g 75 \
     -r 15 \
